@@ -10,6 +10,11 @@ int main() {
 
   ifstream in;
   in.open("input.txt");
+  if (in.fail())
+  {
+    cout << "Failed to open this file!" << endl;
+    return -1;
+  }
   in >> N;
 
   for (int i = 0; i < N; i++) {
